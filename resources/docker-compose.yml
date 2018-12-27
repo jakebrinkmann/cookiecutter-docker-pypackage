@@ -1,0 +1,25 @@
+# Use version 3 for Docker Swarm
+# NOTE: can convert for Kubernetes using kompose:
+#   https://github.com/kubernetes/kompose
+version: '3.5'
+services:
+  # An in-memory key-value store to minimize IO/network bottlenecks
+  redis:
+    image: redis:5.0.3-alpine
+    ports:
+      - "6379"
+    networks:
+      - waldo-jakebrinkmann
+    volumes:
+      - redis-data:/data
+
+# Create a named network, to make it easier for our application to join
+# See Makefile for more details
+networks:
+  waldo-jakebrinkmann:
+    name: waldo-jakebrinkmann
+
+# Use a persistent data store, for start/stop-ing the container
+# Remove all data: `docker-compose down --volumes`
+volumes:
+  redis-data:

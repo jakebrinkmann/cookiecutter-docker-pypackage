@@ -1,0 +1,29 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[pipenv]
+allow_prereleases = true
+
+[requires]
+python_version = "3.7"
+
+[packages]
+# When adding new dependencies to the pipenv:
+#   pipenv lock --clear
+numpy = "==1.15.4"
+opencv-python-headless = "==3.4.4.19"
+redis = "==3.0.1"
+scikit-image = "==0.14.1"
+loguru = "==0.2.4"
+# Local module install
+subimage = {path = "."}
+
+[dev-packages]
+black = "*"
+pydocstyle = "*"
+pytest = "*"
+pytest-cov = "*"
+pylint = "*"
+pep8 = "*"
