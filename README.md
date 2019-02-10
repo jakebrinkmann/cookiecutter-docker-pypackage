@@ -33,11 +33,11 @@ The required pre-installed system dependencies are:
 
 ## Usage [&#x219F;](#contents)
 
-To generate a project from the `cookiecutter-docker-pypackage` template: 
+To generate a project from the `cookiecutter-docker-pypackage` template:
 
 ```bash
 cookiecutter git@github.com:jakebrinkmann/cookiecutter-docker-pypackage
-# Clones template to `~/.cookiecutter/`
+# Clones template to `~/.cookiecutters/`
 ```
 
 Now, use it to generate a project:
