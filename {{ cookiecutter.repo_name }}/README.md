@@ -1,25 +1,44 @@
-# waldo-jakebrinkmann
+# {{ cookiecutter.project_name }}
 
-> [Waldo Photos Engineering Project][1]
+> A quote relevant to the purpose/message of the project <br/>
+> -- Quote Author
 
-```bash
-# see images/README.md for download instructions
-subimage -v ./images/Template_Matching_Original_Image.jpg ./images/Template_Matching_Template_Image.jpg
-```
+[![Build Status][travis-image]][travis-url]
+[![Docker Hub Status][docker-image]][docker-url]
+[![GitHub release][github-image]][github-url]
 
-## Requirements
+[travis-image]: https://img.shields.io/travis/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}/master.svg?style=flat-square
+[travis-url]: https://travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}
+[docker-image]: https://img.shields.io/docker/automated/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}.svg?style=flat-square
+[docker-url]: https://hub.docker.com/r/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}/tags/
+[github-image]: https://img.shields.io/github/last-commit/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}.svg?style=flat-square
+[github-url]: https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}
 
-The required pre-installed system dependencies are:
+{{ cookiecutter.description }}
+
+![header](https://picsum.photos/g/711/400)
+
+#### Contents
+
+* [About](#about-)
+* [Dependencies](#dependencies-)
+* [Usage](#usage-)
+* [Development](#development-)
+* [Contributing](#contributing-)
+* [Meta](#meta-)
+
+## About [&#x219F;](#contents)
+
+One to two paragraph statement about your product and what it does.
+
+## Dependencies [&#x219F;](#contents)
+
+These tools must be pre-installed on the system:
 
 * Python 3.7
-* [Pipenv](./Pipfile)
-* Redis
-* \[Optional\]: [Docker](./Dockerfile)
-* \[Optional\]: [Make](./Makefile)
+* [Docker](https://docs.docker.com/install/)
 
-These `make` instructions will use the optional Make & Docker combo.
-
-## Installation
+## Usage [&#x219F;](#contents)
 
 Create a virtual-environment for our dependencies:
 
@@ -28,23 +47,7 @@ make image
 # Or, `./scripts/setup.sh` for local dev
 ```
 
-## Usage
-
-First start the required background services:
-
-```bash
-make deps-up
-# Or, `redis-server` for local dev
-```
-
-Always start a new session inside the environment
-
-```bash
-make run
-# Or, `./scripts/run.sh` for local dev
-```
-
-## Testing
+## Development  [&#x219F;](#contents)
 
 * *Note* to install test dependencies: `./scripts/setup.sh --dev`
 
@@ -53,17 +56,24 @@ make test
 # Or, `./scripts/test.sh` for local dev
 ```
 
-## License
+## Contributing  [&#x219F;](#contents)
 
-This work is licensed under a [MIT][0] License.
+No contribution is too small!
 
-## Todo
+This package was created with [Cookiecutter](https://github.com/audreyr/cookiecutter)
 
-- [ ] Unit testing framework
-- [ ] Read images over http
-- [ ] Redis caching data store using docker-compose
-- [ ] Job Scheduler and Message queue for incoming images
+## Meta [&#x219F;](#contents)
 
-[0]: ./LICENSE.txt
-[1]: https://gist.github.com/pkoz/0b5f8b75a07785430a2e9d2698316b13
-[2]: https://pipenv.readthedocs.io/en/latest/
+* :bird: [@{{ cookiecutter.twitter_username }}](https://twitter.com/{{ cookiecutter.twitter_username }})
+* :octopus: [@{{ cookiecutter.github_username }}](https://github.com/{{ cookiecutter.github_username }})
+
+Distributed under the {{ cookiecutter.open_source_license }} license. See ``LICENSE.txt`` for more information.
+
+This project adheres to [Conventional Commits](https://www.conventionalcommits.org) and [Semantic Releases](https://semver.org/).
+
+[https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}](https://github.com/{{ cookiecutter.github_username }}//{{ cookiecutter.repo_name }})
+
+---
+---
+
+[&#x219F; Back to Top &#x219F;](#readme)
