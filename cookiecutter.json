@@ -1,11 +1,11 @@
 {
   "full_name": "Jake Brinkmann",
-  "email": "jakebrinkmann@example.com",
   "github_username": "jakebrinkmann",
+  "twitter_username": "jakebrinkmann",
   "project_name": "Docker Python Boilerplate",
-  "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
-  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
-  "description": "Bootstrapping for Docker-hosted Python packages.",
+  "description": "Short blurb about what your product does.",
   "version": "0.1.0",
-  "open_source_license": ["MIT", "BSD-3-Clause", "No license file"]
+  "open_source_license": ["MIT", "BSD-3-Clause", "No license file"],
+  "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}"
 }
